@@ -2,6 +2,7 @@
 	import NextDepartures from '$lib/components/NextDepartures.svelte';
 	import { getCurrentDayKey } from '$lib/utils/time';
 	import { DAY_LABELS } from '$lib/utils/labels';
+  import RouteLegend from '$lib/components/RouteLegend.svelte';
 
 	const dayLabel = DAY_LABELS[getCurrentDayKey()];
 </script>
@@ -16,6 +17,7 @@
 		<p class="subtitle">{dayLabel} · automatski se osvježava</p>
 	</div>
 	<NextDepartures />
+	<RouteLegend />
 	<p class="hint">
 		Pogledaj <a href="/schedule">cijeli vozni red</a>.
 	</p>
